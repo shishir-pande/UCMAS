@@ -1,0 +1,35 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+@font-face {
+    font-family: 'playtimewithhottoddiesobliqRg';
+    src: url('PlaytimeOblique-webfont.eot');
+    src: url('PlaytimeOblique-webfont.eot?#iefix') format('embedded-opentype'),
+         url('PlaytimeOblique-webfont.woff2') format('woff2'),
+         url('PlaytimeOblique-webfont.woff') format('woff'),
+         url('PlaytimeOblique-webfont.ttf') format('truetype'),
+         url('PlaytimeOblique-webfont.svg#playtimewithhottoddiesobliqRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$font-header:			playtimewithhottoddiesobliqRg, sans-serif;
+$font-body:				arial, sans-serif;
+
+$primary-color: 	#f58633;
+$secondary-color:	#2dbbc5;
+$body-font-color: #949393;
+$background-color: #f0f0f0;
+
+body {
+	font: 	1.75em $font-body;
+	color: 	$body-font-color;
+    background-color:   $background-color;
+}
+
+h1 {
+	font:  	3em $font-header;
+	color:  black;
+    padding-bottom: 1em;
+}
+

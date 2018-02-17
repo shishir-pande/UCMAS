@@ -1,0 +1,48 @@
+
+<h1>All Registrations</h1>
+ 
+<table>
+  <tr>
+    <th>Student's First Name</th>
+    <th>Student's Last Name</th>
+    <th>School</th>
+    <th>Grade</th>
+    <th>Home Phone Number</th>
+    <th>House Number</th>
+    <th>Street</th>
+    <th>City</th>
+    <th>Province</th>
+    <th>Postal Code</th>
+    <th>Mother's First Name</th>
+    <th>Mother's Last Name</th>
+    <th>Mother's Email Address</th>
+    <th>Mother's Mobile Phone</th>
+    <th>Father's First Name</th>
+    <th>Father's Last Name</th>
+    <th>Father's Email Address</th>
+    <th>Father's Mobile Phone</th>
+  </tr>
+ 
+  <% @registrations.each do |registration| %>
+    <tr>
+      <td><%= registration.studentfirstname %></td>
+      <td><%= registration.studentlastname %></td>
+      <td><%= registration.school %></td>
+      <td><%= registration.grade %></td>
+      <td><%= registration.housenumber %></td>
+      <td><%= registration.street %></td>
+      <td><%= registration.city %></td>
+      <td><%= registration.province %></td>
+      <td><%= registration.postcode %></td>
+      <td><%= registration.motherfirstname %></td>
+      <td><%= registration.motherlastname %></td>
+      <td><%= registration.motheremail %></td>
+      <td><%= registration.mothercell %></td>
+      <td><%= registration.fatherfirstname %></td>
+      <td><%= registration.fatherlastname %></td>
+      <td><%= registration.fatheremail %></td>
+      <td><%= registration.fathercell %></td>
+      <td><%= link_to 'Show', registration_path(registration) %></td>
+    </tr>
+  <% end %>
+</table>

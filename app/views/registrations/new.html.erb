@@ -1,0 +1,135 @@
+
+<div class="col-md-12 page-title">
+  <h1>New Registration</h1>
+</div>
+
+
+<div class="col-md-1"></div>
+<div class="col-md-10">
+  <%= form_with scope: :registration, url: registrations_path, local: true do |form| %>
+    <p>
+      <%= form.label :studentfirstname, "Student's First Name:" %><br>
+      <%= form.text_field :studentfirstname %>
+    </p>
+
+    <p>
+      <%= form.label :studentlastname, "Student's Last Name:" %><br>
+      <%= form.text_field :studentlastname %>
+    </p>
+
+    <p>
+      <%= form.label :school, "School:" %><br>
+      <%= form.text_field :school %>
+    </p>
+
+    <p>
+      <%= form.label :grade, "Grade:" %><br>
+      <%= form.text_field :grade %>
+    </p>
+
+    <p>
+      <%= form.label :birthday, "Student's Birthday:" %><br>
+      <%= form.date_field :birthday %>
+    </p>
+
+    <p>
+      <%= form.label :homephone, "Home Phone Number:" %><br>
+      <%= form.telephone_field :homephone %>
+    </p>
+
+    <p>
+      <%= form.label :housenumber, "House Number:" %><br>
+      <%= form.text_field :housenumber %>
+    </p>
+
+    <p>
+      <%= form.label :street, "Street:" %><br>
+      <%= form.text_field :street %>
+    </p>
+
+    <p>
+      <%= form.label :city, "City:" %><br>
+      <%= form.text_field :city %>
+    </p>
+
+    <p>
+      <%= form.label :province, "Province:" %><br>
+      <%= form.text_field :province %>
+    </p>
+
+    <p>
+      <%= form.label :postcode, "Postal Code:" %><br>
+      <%= form.text_field :postcode %>
+    </p>
+
+    <p>
+      <%= form.label :motherfirstname, "Mother's First Name:" %><br>
+      <%= form.text_field :motherfirstname %>
+    </p>
+
+    <p>
+      <%= form.label :motherlastname, "Mother's Last Name" %><br>
+      <%= form.text_field :motherlastname %>
+    </p>
+
+    <p>
+      <%= form.label :motheremail, "Mother's Email Address" %><br>
+      <%= form.email_field :motheremail %>
+    </p>
+
+    <p>
+      <%= form.label :mothercell, "Mother's Mobile Phone:" %><br>
+      <%= form.telephone_field :mothercell %>
+    </p>
+
+    <p>
+      <%= form.label :fatherfirstname, "Father's First Name:" %><br>
+      <%= form.text_field :fatherfirstname %>
+    </p>
+
+    <p>
+      <%= form.label :fatherlastname, "Father's Last Name:" %><br>
+      <%= form.text_field :fatherlastname %>
+    </p>
+
+    <p>
+      <%= form.label :fatheremail, "Father's Email:" %><br>
+      <%= form.email_field :fatheremail %>
+    </p>
+
+    <p>
+      <%= form.label :fathercell, "Father's Mobile Phone:" %><br>
+      <%= form.telephone_field :fathercell %>
+    </p>
+
+    <p>
+      <%= form.label :emergfirstname, "Emergency Contact's First Name:" %><br>
+      <%= form.text_field :emergfirstname %>
+    </p>
+
+    <p>
+      <%= form.label :emerglastname, "Emergency Contact's Last Name:" %><br>
+      <%= form.text_field :emerglastname %>
+    </p>
+
+    <p>
+      <%= form.label :emergrelation, "Emergency Contact's Relationship to Student:" %><br>
+      <%= form.text_field :emergrelation %>
+    </p>
+
+    <p>
+      <%= form.label :emergphone, "Emergency Contact Phone Number:" %><br>
+      <%= form.telephone_field :emergphone %>
+    </p>
+   
+    <p>
+      <div class="btn-container">
+        <%= form.submit class: 'btn btn-default' %>
+      </div>
+    </p>
+  <% end %>
+</div>
+<div class="col-md-1"></div>
+<div class="col-md-12">
+  <%= link_to 'Home', welcome_index_path %>
+</div>

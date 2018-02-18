@@ -1,43 +1,177 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-@font-face {
-    font-family: 'playtimewithhottoddiesobliqRg';
-    src: url('PlaytimeOblique-webfont.eot');
-    src: url('PlaytimeOblique-webfont.eot?#iefix') format('embedded-opentype'),
-         url('PlaytimeOblique-webfont.woff2') format('woff2'),
-         url('PlaytimeOblique-webfont.woff') format('woff'),
-         url('PlaytimeOblique-webfont.ttf') format('truetype'),
-         url('PlaytimeOblique-webfont.svg#playtimewithhottoddiesobliqRg') format('svg');
-    font-weight: normal;
-    font-style: normal;
+/*
+ * Globals
+ */
+ $background-color: #f0f0f0;
+ $text-color:       #949393;
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: $text-color;
 }
 
-$font-header:			playtimewithhottoddiesobliqRg, sans-serif;
-$font-body:				arial, sans-serif;
+/* Custom default button */
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: $background-color;
+  text-shadow: none; /* Prevent inheritance from `body` */
+  background-color: $text-color;
+  border: .05rem solid $text-color;
+}
 
-$primary-color: 	#f58633;
-$secondary-color:	#2dbbc5;
-$body-font-color: #949393;
-$background-color: #f0f0f0;
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  height: 100%;
+  background-color: $background-color;
+}
 
 body {
-	font: 	1.75em $font-body;
-	color: 	$body-font-color;
-    background-color:   $background-color;
-    text-align: center;
+  color: $text-color;
+  text-align: center;
+  text-shadow: 0 .05rem .05rem #f7f7f7;
 }
 
-h1 {
-	font:  	3em $font-header;
-	color:  black;
-    padding-bottom: 1em;
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+  -webkit-box-shadow: inset 0 0 5rem rgba(0,0,0,.5);
+          box-shadow: inset 0 0 5rem rgba(0,0,0,.5);
+}
+.site-wrapper-inner {
+  display: table-cell;
+  vertical-align: top;
+}
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
 }
 
-div {
-    display: block;
-}
-
+/* Padding for spacing */
 .inner {
-    padding: 2rem;
+  padding: 2rem;
+}
+
+
+/*
+ * Header
+ */
+
+.masthead {
+  margin-bottom: 2rem;
+}
+
+.masthead-brand {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.nav-masthead .nav-link {
+  padding: .25rem 0;
+  font-weight: bold;
+  color: $text-color;
+  background-color: transparent;
+  border-bottom: .25rem solid transparent;
+}
+
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+  border-bottom-color: $text-color;
+  text-decoration: none;
+}
+
+.nav-masthead .nav-link + .nav-link {
+  margin-left: 1rem;
+}
+
+.nav-masthead .active {
+  color: $text-color;
+  border-bottom-color: $text-color;
+}
+
+@media (min-width: 48em) {
+  .masthead-brand {
+    float: left;
+  }
+  .nav-masthead {
+    float: right;
+  }
+}
+
+
+/*
+ * Cover
+ */
+
+.cover {
+  padding: 0 1.5rem;
+}
+.cover .btn-lg {
+  padding: .75rem 1.25rem;
+  font-weight: bold;
+}
+
+
+/*
+ * Footer
+ */
+
+.mastfoot {
+  color: rgba(255,255,255,.5);
+}
+
+
+/*
+ * Affix and center
+ */
+
+@media (min-width: 40em) {
+  /* Pull out the header and footer */
+  .masthead-container {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .masthead {
+    display: inline-block;
+    position: fixed;
+    top: 0;
+  }
+  .mastfoot {
+    position: fixed;
+    bottom: 0;
+  }
+  /* Start the vertical centering */
+  .site-wrapper-inner {
+    vertical-align: middle;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* Handle the widths */
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  }
+}
+
+@media (min-width: 62em) {
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 70rem;
+  }
 }

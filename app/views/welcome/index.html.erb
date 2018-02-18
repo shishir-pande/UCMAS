@@ -1,2 +1,41 @@
-<h1>UCMAS London</h1>
-<%= link_to 'Register Now!', new_registration_path %>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		
+	</head>
+	<body>
+		<div class="site_wrapper">
+			<div class="site_wrapper-inner">
+				<div class="cover-container">
+					<div class="masthead clearfix">
+						<div class="inner">
+							<h3 class="masthead-brand">Cover</h3>
+							<nav class="nav nav-masthead">
+								<%= link_to 'Register Now!', new_registration_path %>
+								<%= link_to 'Sign In', new_charge_path %>
+							</nav>
+						</div>
+					</div>
+					<div class="inner cover">
+						<h1 class="cover-heading">Discover the genius within.</h1>
+						<p class="lead">
+							UCMAS London has been empowering kids with learning skills and discipline since 2005. Enroll your child now!
+						</p>
+						<p class="lead">
+							<%= link_to 'Register Now!', new_registration_path, { :class=>"btn btn-lg btn-secondary" } %>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	  <!-- Bootstrap core JavaScript
+	  ================================================== -->
+	  <!-- Placed at the end of the document so the pages load faster -->
+	  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+	  <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+	  <script src="../../dist/js/bootstrap.min.js"></script>
+	  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	  <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+	</body>
+</html>

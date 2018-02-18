@@ -25,6 +25,7 @@ body {
 	font: 	1.75em $font-body;
 	color: 	$body-font-color;
     background-color:   $background-color;
+    text-align: center;
 }
 
 h1 {
@@ -33,3 +34,10 @@ h1 {
     padding-bottom: 1em;
 }
 
+div {
+    display: block;
+}
+
+.inner {
+    padding: 2rem;
+}
